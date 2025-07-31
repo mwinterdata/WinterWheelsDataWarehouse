@@ -1,25 +1,22 @@
 # Winter Wheels Data Warehouse
 
+Welcome to the repository for the **data warehouse with medallion architecture built in SQL Server** for the fictional company 'Winter Wheels'!  
 
-Welcome to the repository for the **data warehouse with medallion architecture built in SQL Server** for the fictional company 'Winter Wheels'.  
+This project showcases a comprehensive data warehousing solution, from building the structure of the data warehouse to cleaning and preparing 
+data for easy, out of the box use for an end user for either analytics or machine learning.
+Specifically demonstrated in this project are:
+-**Knowledge of and comfort with medallion architecture data warehousing:** following the bronze, silver, and gold layering system to create a data warehouse
+where it is not only easy to identify and fix any issues in the data flow, but is also simple for whoever is using the data to perform data analysis without 
+having to struggle to understand, extract, or clean confusing data.
+-**ETL Pipelines in SQL:** extracting, transforming, and loading data from source systems into the warehouse to end up with clean data files.
+-**Data Modeling:** Developing fact and dimension tables optimized for analytical queries and easy to use schema.
 
-This project showcases a comprehensive data warehousing solution, from building the structure of the data warehouse to cleaning and preparing data for 
-Designed as a portfolio project that highlights industry best practics in data engineering and analytics.
 
-This project involves:
 
-Data Architecture: Designing a Modern Data Warehouse Using Medallion Architecture Bronze, Silver, and Gold layers.
-ETL Pipelines: Extracting, transforming, and loading data from source systems into the warehouse.
-Data Modeling: Developing fact and dimension tables optimized for analytical queries.
-Analytics & Reporting: Creating SQL-based reports and dashboards for actionable insights.
-🎯 This repository is an excellent resource for professionals and students looking to showcase expertise in:
 
-SQL Development
-Data Architect
-Data Engineering
-ETL Pipeline Developer
-Data Modeling
-Data Analytics
+Below are some key terms used in the data warehouse to help with its reading and use:
+
+
 
 
 Bronze Rules
