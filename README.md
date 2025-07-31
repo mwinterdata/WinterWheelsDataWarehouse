@@ -16,6 +16,8 @@ having to struggle to understand, extract, or clean confusing data.
 -**Data Modeling:** Developing fact and dimension tables optimized for analytical queries and easy to use schema.
 
 
+---------------------------
+
 
 **Quick Guide:**
 
