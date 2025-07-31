@@ -6,31 +6,29 @@ Welcome to the repository for the **data warehouse with medallion architecture b
 This project showcases a comprehensive data warehousing solution, from building the structure of the data warehouse to cleaning and preparing data for 
 Designed as a portfolio project that highlights industry best practics in data engineering and analytics.
 
-General Principles
-Naming Conventions: Use snake_case, with lowercase letters and underscores (_) to separate words.
-Language: Use English for all names.
-Avoid Reserved Words: Do not use SQL reserved words as object names.
-Table Naming Conventions
+This project involves:
+
+Data Architecture: Designing a Modern Data Warehouse Using Medallion Architecture Bronze, Silver, and Gold layers.
+ETL Pipelines: Extracting, transforming, and loading data from source systems into the warehouse.
+Data Modeling: Developing fact and dimension tables optimized for analytical queries.
+Analytics & Reporting: Creating SQL-based reports and dashboards for actionable insights.
+🎯 This repository is an excellent resource for professionals and students looking to showcase expertise in:
+
+SQL Development
+Data Architect
+Data Engineering
+ETL Pipeline Developer
+Data Modeling
+Data Analytics
+
+
 Bronze Rules
 All names must start with the source system name, and table names must match their original names without renaming.
 <sourcesystem>_<entity>
 <sourcesystem>: Name of the source system (e.g., crm, erp).
 <entity>: Exact table name from the source system.
 Example: crm_customer_info → Customer information from the CRM system.
-Silver Rules
-All names must start with the source system name, and table names must match their original names without renaming.
-<sourcesystem>_<entity>
-<sourcesystem>: Name of the source system (e.g., crm, erp).
-<entity>: Exact table name from the source system.
-Example: crm_customer_info → Customer information from the CRM system.
-Gold Rules
-All names must use meaningful, business-aligned names for tables, starting with the category prefix.
-<category>_<entity>
-<category>: Describes the role of the table, such as dim (dimension) or fact (fact table).
-<entity>: Descriptive name of the table, aligned with the business domain (e.g., customers, products, sales).
-Examples:
-dim_customers → Dimension table for customer data.
-fact_sales → Fact table containing sales transactions.
+
 Glossary of Category Patterns
 Pattern	Meaning	Example(s)
 dim_	Dimension table	dim_customer, dim_product
@@ -49,12 +47,3 @@ dwh_<column_name>
 dwh: Prefix exclusively for system-generated metadata.
 <column_name>: Descriptive name indicating the column's purpose.
 Example: dwh_load_date → System-generated column used to store the date when the record was loaded.
-Stored Procedure
-All stored procedures used for loading data must follow the naming pattern:
-
-load_<layer>.
-
-<layer>: Represents the layer being loaded, such as bronze, silver, or gold.
-Example:
-load_bronze → Stored procedure for loading data into the Bronze layer.
-load_silver → Stored procedure for loading data into the Silver layer.
