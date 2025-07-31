@@ -18,11 +18,20 @@ having to struggle to understand, extract, or clean confusing data.
 
 
 **Quick Guide:**
+
+-This repository is split into 'datasets' containing all of the data used within the data warehouse, and 'workflow' showing the workflow in an easy to read and work through format. If
+Winter Wheels was a real company and this data warehouse was going to be regularly refreshed and updated, I would separate this workflow by layers as well as separate out the tests (and
+make them more comrehensive), as well as add refresh automations to reflect the frequency that the external data was updated. Hopefully however this adjusted format allows for a much reduced
+appraisal time.
+
 -The datasets for this project come from two sources; the CRM (Customer Relationship Management) and ERP (Enterprise Resource Planning) folders. Throughout the 
 bronze and silver layers of the data warehouse it will be made clear which of these the data is coming from with 'crm_' or 'erp_', followed by the original names of these data tables 
 in the external system e.g. 'crm_cust_info'.
+
 -Following the medallion architecture structure, the bronze layer is exclusively for landing the data in our database from the external CRM and ERP sources, the silver
 layer is for cleaning, standardising, and augmenting the data as necessary (e.g. to add key columns to allow for joins and schema creation), and our gold layer is for 
 preparing the data for easy business use.
+
 -Added technical columns for meta-data such as the data a record was created in the silver layer to help identify any issues in the future are indicated wit 'dwh_'
+
 -Views in the gold layer are labelled either 'dim_' for dimensions or 'fact_' for facts to help end business users easily identify their use.
