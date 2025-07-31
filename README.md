@@ -17,39 +17,12 @@ having to struggle to understand, extract, or clean confusing data.
 
 
 
-
-
-
-
-
-
-Below are some key terms used in the data warehouse to help with its reading and use:
-
-
-
-
-Bronze Rules
-All names must start with the source system name, and table names must match their original names without renaming.
-<sourcesystem>_<entity>
-<sourcesystem>: Name of the source system (e.g., crm, erp).
-<entity>: Exact table name from the source system.
-Example: crm_customer_info → Customer information from the CRM system.
-
-Glossary of Category Patterns
-Pattern	Meaning	Example(s)
-dim_	Dimension table	dim_customer, dim_product
-fact_	Fact table	fact_sales
-report_	Report table	report_customers, report_sales_monthly
-Column Naming Conventions
-Surrogate Keys
-All primary keys in dimension tables must use the suffix _key.
-<table_name>_key
-<table_name>: Refers to the name of the table or entity the key belongs to.
-_key: A suffix indicating that this column is a surrogate key.
-Example: customer_key → Surrogate key in the dim_customers table.
-Technical Columns
-All technical columns must start with the prefix dwh_, followed by a descriptive name indicating the column's purpose.
-dwh_<column_name>
-dwh: Prefix exclusively for system-generated metadata.
-<column_name>: Descriptive name indicating the column's purpose.
-Example: dwh_load_date → System-generated column used to store the date when the record was loaded.
+**Quick Guide:**
+-The datasets for this project come from two sources; the CRM (Customer Relationship Management) and ERP (Enterprise Resource Planning) folders. Throughout the 
+bronze and silver layers of the data warehouse it will be made clear which of these the data is coming from with 'crm_' or 'erp_', followed by the original names of these data tables 
+in the external system e.g. 'crm_cust_info'.
+-Following the medallion architecture structure, the bronze layer is exclusively for landing the data in our database from the external CRM and ERP sources, the silver
+layer is for cleaning, standardising, and augmenting the data as necessary (e.g. to add key columns to allow for joins and schema creation), and our gold layer is for 
+preparing the data for easy business use.
+-Added technical columns for meta-data such as the data a record was created in the silver layer to help identify any issues in the future are indicated wit 'dwh_'
+-Views in the gold layer are labelled either 'dim_' for dimensions or 'fact_' for facts to help end business users easily identify their use.
