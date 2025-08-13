@@ -23,7 +23,7 @@ having to struggle to understand, extract, or clean confusing data.
 
 -This repository is split into 'datasets' containing all of the data used within the data warehouse, and 'workflow' showing the workflow in an easy to read and work through format. If
 Winter Wheels was a real company and this data warehouse was going to be regularly refreshed and updated, I would separate this workflow by layers as well as separate out the tests (and
-make them more comrehensive), as well as add refresh automations to reflect the frequency that the external data was updated. Hopefully however this adjusted format allows for a much reduced
+make them more comprehensive), as well as add refresh automations to reflect the frequency that the external data was updated. Hopefully however this adjusted format allows for a much reduced
 appraisal time.
 
 -The datasets for this project come from two sources; the CRM (Customer Relationship Management) and ERP (Enterprise Resource Planning) folders. Throughout the 
